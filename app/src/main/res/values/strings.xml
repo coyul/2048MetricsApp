@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">2048MetricsApp</string>
+    <string name="title_main_metrics">Overview</string>
+    <string name="title_countries_metrics">By countries</string>
+</resources>
