@@ -1,5 +1,18 @@
 <resources>
+    <!-- titles -->
     <string name="app_name">2048MetricsApp</string>
-    <string name="title_main_metrics">Overview</string>
+    <string name="title_main_metrics">2048 Overview</string>
     <string name="title_countries_metrics">By countries</string>
+
+    <!-- errors and stubs-->
+    <string name="error_text">Unfortunately, something went wrong. Please try to reload the app</string>
+
+    <!-- data formats-->
+    <string name="downloads_format">%d downloads</string>
+    <string name="revenue_format">%f \$</string>
+
+    <!-- countries list headers-->
+    <string name="country_header">Country</string>
+    <string name="downloads_header">Downloads</string>
+    <string name="revenue_header">Revenue</string>
 </resources>

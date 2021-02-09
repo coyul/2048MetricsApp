@@ -11,5 +11,5 @@ abstract class AppModule {
 
     @Binds
     @ApplicationScope
-    abstract fun bindsProductsLifeCycleRepository(repository: AuthRepositoryImpl): AuthRepository
+    abstract fun bindsAuthRepository(repository: AuthRepositoryImpl): AuthRepository
 }

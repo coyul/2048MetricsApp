@@ -6,17 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".presentation.fragment.MainMetricsFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
+    <include
+        android:id="@+id/stub_layout"
+        layout="@layout/stub_layout"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="@dimen/constraint_match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/margin_s"
+        android:padding="@dimen/margin_m"
+        android:textAppearance="@style/TextAppearance.Basic.Body"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="ss" />
+
+    <TextView
+        android:id="@+id/downloads_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_l"
+        android:textAppearance="@style/TextAppearance.Basic.Header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        tools:text="1000 downloads" />
+
+    <ProgressBar
+        android:id="@+id/downloads_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/downloads_text"
+        app:layout_constraintEnd_toEndOf="@+id/downloads_text"
+        app:layout_constraintStart_toStartOf="@+id/downloads_text"
+        app:layout_constraintTop_toTopOf="@+id/downloads_text" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/downloads_graphic"
+        android:layout_width="@dimen/constraint_match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_m"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/downloads_text"
+        tools:src="@tools:sample/avatars" />
+
+    <ProgressBar
+        android:id="@+id/downloads_graphic_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/downloads_graphic"
+        app:layout_constraintEnd_toEndOf="@+id/downloads_graphic"
+        app:layout_constraintStart_toStartOf="@+id/downloads_graphic"
+        app:layout_constraintTop_toTopOf="@+id/downloads_graphic" />
+
+    <TextView
+        android:id="@+id/revenue_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_l"
+        android:textAppearance="@style/TextAppearance.Basic.Header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/downloads_graphic"
+        tools:text="1000 $" />
+
+    <ProgressBar
+        android:id="@+id/revenue_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/revenue_text"
+        app:layout_constraintEnd_toEndOf="@+id/revenue_text"
+        app:layout_constraintStart_toStartOf="@+id/revenue_text"
+        app:layout_constraintTop_toTopOf="@+id/revenue_text" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/revenue_graphic"
+        android:layout_width="@dimen/constraint_match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_m"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/revenue_text"
+        tools:src="@tools:sample/avatars" />
+
+    <ProgressBar
+        android:id="@+id/revenue_graphic_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/revenue_graphic"
+        app:layout_constraintEnd_toEndOf="@+id/revenue_graphic"
+        app:layout_constraintStart_toStartOf="@+id/revenue_graphic"
+        app:layout_constraintTop_toTopOf="@+id/revenue_graphic" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

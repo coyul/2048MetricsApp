@@ -25,7 +25,7 @@ data class Sales(
 data class Revenue(
     @SerializedName("ad") val ad: String,
     @SerializedName("iap") val iap: Iap,
-    @SerializedName("product") val product: SharedProduct
+    @SerializedName("product") val product: Product
 )
 
 data class Units(
@@ -34,14 +34,14 @@ data class Units(
 )
 
 data class Iap(
-    @SerializedName("promotions") val promotions: String,
-    @SerializedName("refunds") val refunds: String,
-    @SerializedName("sales") val sales: String
+    @SerializedName("promotions") val promotions: Double,
+    @SerializedName("refunds") val refunds: Double,
+    @SerializedName("sales") val sales: Double
 )
 
 data class Product(
-    @SerializedName("downloads") val downloads: String,
-    @SerializedName("promotions") val promotions: String,
-    @SerializedName("refunds") val refunds: String,
-    @SerializedName("updates") val updates: String
+    @SerializedName("downloads") val downloads: Double,
+    @SerializedName("promotions") val promotions: Double,
+    @SerializedName("refunds") val refunds: Double,
+    @SerializedName("updates") val updates: Double
 )

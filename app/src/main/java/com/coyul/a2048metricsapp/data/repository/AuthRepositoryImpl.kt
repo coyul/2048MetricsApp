@@ -4,11 +4,12 @@ import com.coyul.a2048metricsapp.domain.repository.AuthRepository
 import javax.inject.Inject
 
 class AuthRepositoryImpl @Inject constructor() : AuthRepository {
-    override fun getSavedAccountId(): String {
-        TODO("Not yet implemented")
+
+    private var accountId: Long = 0L
+
+    override fun saveAccountId(accountId: Long) {
+        this.accountId = accountId
     }
 
-    override fun saveAccountId(): String {
-        TODO("Not yet implemented")
-    }
+    override fun getSavedAccountId(): Long = accountId
 }

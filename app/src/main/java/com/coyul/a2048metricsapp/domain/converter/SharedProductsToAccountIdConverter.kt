@@ -5,8 +5,8 @@ import com.coyul.a2048metricsapp.data.model.RawSharedProductsData
 import javax.inject.Inject
 
 class SharedProductsToAccountIdConverter @Inject constructor() :
-    OneWayConverter<RawSharedProductsData, String> {
-    override fun convert(item: RawSharedProductsData): String {
-        TODO("Not yet implemented")
-    }
+    OneWayConverter<RawSharedProductsData, Long> {
+
+    override fun convert(item: RawSharedProductsData): Long =
+        item.sharings.first().owner_account_id
 }
