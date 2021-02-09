@@ -7,3 +7,5 @@ enum class UiPeriod(val daysPeriod: Int) {
     THREE_MONTHS(90),
     ONE_YEAR(365),
 }
+
+const val FIRST_PERIOD: String = "All time"

@@ -7,8 +7,8 @@ import javax.inject.Inject
 
 class AuthInteractor @Inject constructor(
     private val sharedProductsRepository: SharedProductsRepository,
-    private val authRepository: AuthRepository
-) {
+    private val authRepository: AuthRepository) {
+
     fun loadAccountId(): Completable =
         sharedProductsRepository.getAccountId()
             .doOnSuccess { authRepository.saveAccountId(it) }

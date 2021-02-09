@@ -15,17 +15,12 @@ import javax.inject.Inject
 class CountrySalesDataRepositoryImpl @Inject constructor(
     private val countriesApi: CountriesApi,
     private val productSalesApi: ProductSalesApi,
-    private val converter: CountryProductSalesDataConverter
-) : CountrySalesDataRepository {
+    private val converter: CountryProductSalesDataConverter) : CountrySalesDataRepository {
 
     override fun getCountrySalesData(accountId: Long): Single<List<CountrySalesData>> =
         Observable.zip(
             countriesApi.getCountries(),
-            productSalesApi.getSalesData(
-                accountId,
-                BuildConfig.APP_ID,
-                mapOf(ApiConstants.BREAKDOWN_QUERY to BreakDown.COUNTRY.value)
-            ),
+            productSalesApi.getSalesData(accountId, BuildConfig.APP_ID, mapOf(ApiConstants.BREAKDOWN_QUERY to BreakDown.COUNTRY.value)),
             { rawCountries, rawSalesData -> converter.convert(Pair(rawCountries, rawSalesData)) })
             .firstOrError()
 }

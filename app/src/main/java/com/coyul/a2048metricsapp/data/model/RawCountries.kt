@@ -2,7 +2,6 @@ package com.coyul.a2048metricsapp.data.model
 
 import com.google.gson.annotations.SerializedName
 
-
 data class RawCountries(
     @SerializedName("code") val code: Long,
     @SerializedName("country_list") val countryList: List<Country>,

@@ -8,8 +8,7 @@ import com.coyul.a2048metricsapp.R
 import com.coyul.a2048metricsapp.databinding.CountryListItemBinding
 import com.coyul.a2048metricsapp.domain.model.CountrySalesData
 
-class CountriesAdapter :
-    RecyclerView.Adapter<CountriesAdapter.ViewHolder>() {
+class CountriesAdapter : RecyclerView.Adapter<CountriesAdapter.ViewHolder>() {
 
     private var countriesList: List<CountrySalesData> = emptyList()
 

@@ -4,13 +4,10 @@
     <dimen name="progress_bar_dimen">64dp</dimen>
     <dimen name="image_list_dimen">48dp</dimen>
     <!-- margin -->
-    <dimen name="margin_xs">2dp</dimen>
     <dimen name="margin_s">8dp</dimen>
     <dimen name="margin_m">16dp</dimen>
     <dimen name="margin_l">24dp</dimen>
-    <dimen name="margin_xl">48dp</dimen>
     <!-- text sizes -->
     <dimen name="text_size_header">28sp</dimen>
     <dimen name="text_size_basic">20sp</dimen>
-    <dimen name="text_size_caption">16sp</dimen>
 </resources>

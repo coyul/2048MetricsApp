@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?colorAccent"
+    android:background="@color/grey"
     android:padding="@dimen/margin_s">
 
     <TextView
@@ -11,7 +11,6 @@
         android:layout_width="@dimen/constraint_match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_l"
-
         android:text="@string/country_header"
         android:textAppearance="@style/TextAppearance.Basic.Body"
         app:layout_constraintEnd_toStartOf="@+id/country_downloads"

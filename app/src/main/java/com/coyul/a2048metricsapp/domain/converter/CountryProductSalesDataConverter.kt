@@ -9,8 +9,8 @@ import javax.inject.Inject
 
 class CountryProductSalesDataConverter @Inject constructor() :
     OneWayConverter<Pair<RawCountries, RawProductSalesData>, List<CountrySalesData>> {
-    override fun convert(item: Pair<RawCountries, RawProductSalesData>): List<CountrySalesData> {
 
+    override fun convert(item: Pair<RawCountries, RawProductSalesData>): List<CountrySalesData> {
         val countryList: List<Country> = item.first.countryList
         val resultList: MutableList<CountrySalesData> = mutableListOf()
         item.second.salesList.forEach { saleItem ->
@@ -23,7 +23,7 @@ class CountryProductSalesDataConverter @Inject constructor() :
                     (iap.promotions + iap.refunds + iap.sales),
                     countryCode,
                     countryList.find { it.countryCode == countryCode }?.countryName,
-                    "$IMAGE_HOST${countryCode.toLowerCase(Locale.getDefault())}$extension"
+                    "$IMAGE_HOST${countryCode.toLowerCase(Locale.getDefault())}$EXTENSION"
                 )
             )
         }
@@ -31,6 +31,6 @@ class CountryProductSalesDataConverter @Inject constructor() :
     }
 
     companion object {
-        private const val extension: String = ".gif"
+        private const val EXTENSION: String = ".gif"
     }
 }

@@ -10,6 +10,7 @@
     <!-- data formats-->
     <string name="downloads_format">%d downloads</string>
     <string name="revenue_format">%f \$</string>
+    <string name="days_filter_format">last %d days</string>
 
     <!-- countries list headers-->
     <string name="country_header">Country</string>

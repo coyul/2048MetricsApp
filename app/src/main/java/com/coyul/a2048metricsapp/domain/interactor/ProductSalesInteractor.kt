@@ -9,8 +9,8 @@ import javax.inject.Inject
 
 class ProductSalesInteractor @Inject constructor(
     private val productSalesRepository: ProductSalesRepository,
-    private val authInteractor: AuthInteractor
-) {
+    private val authInteractor: AuthInteractor) {
+
     fun getSalesData(): Single<SalesData> =
         productSalesRepository.getSalesData(authInteractor.getAccountId())
 

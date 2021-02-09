@@ -28,7 +28,6 @@ class CountriesFragment : DaggerFragment() {
         viewModel =
             ViewModelProvider(this, viewModelFactory).get(CountriesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_countries, container, false)
-
         binding = FragmentCountriesBinding.bind(root)
         observeViewModel()
         return root

@@ -7,8 +7,8 @@ import javax.inject.Inject
 
 class CountriesInteractor @Inject constructor(
    private val authInteractor: AuthInteractor,
-    private val countrySalesDataRepository: CountrySalesDataRepository
-) {
+    private val countrySalesDataRepository: CountrySalesDataRepository) {
+
     fun getCountrySalesData(): Single<List<CountrySalesData>> =
         countrySalesDataRepository.getCountrySalesData(authInteractor.getAccountId())
 }
